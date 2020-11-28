@@ -1,6 +1,7 @@
 import React, {FormEvent, useState} from 'react'
 import {User} from "../providers/user";
 import {ErrorDisplay} from "./error";
+import {NavHeader} from "./NavHeader";
 
 export const SignupPage = () => {
     const { auth, firestore } = User.useContainer()
@@ -37,6 +38,7 @@ export const SignupPage = () => {
 
     return (
         <div>
+            <NavHeader />
             <p>Sign Up</p>
             <form onSubmit={handleSubmit}>
                 <label>
