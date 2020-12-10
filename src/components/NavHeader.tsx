@@ -15,7 +15,7 @@ export const NavHeader = () => {
                     <React.Fragment>
                         <a href={"/"} onClick={() => auth.signOut()}>logout</a>
                         <a href={"/play"}>play</a>
-                        <p>{userData?.username || user.email}</p>
+                        <a href={"/user"}>{userData?.username || user.email}</a>
                     </React.Fragment>
                 ) :
                 (

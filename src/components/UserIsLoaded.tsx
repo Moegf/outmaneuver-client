@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react'
+import React, {useEffect} from 'react'
 import {LoadingPage} from "./loading";
 import {ErrorDisplay} from "./error";
 import {User, Userdata} from "../providers/user";
