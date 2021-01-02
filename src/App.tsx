@@ -4,6 +4,8 @@ import {HomePage} from './components/HomePage'
 import {LoginPage} from "./components/login";
 import {User} from "./providers/user";
 import {SignupPage} from "./components/signup";
+import {Game} from "./components/game";
+import {GameState} from "./providers/gamestate";
 
 const App = () => {
     const {user} = User.useContainer()
@@ -16,14 +18,19 @@ const App = () => {
                 </Route>
                 <Route exact path="/login">
                     {user ?
-                        <Redirect to={"/"} /> :
+                        <Redirect to={"/"}/> :
                         <LoginPage/>}
                 </Route>
                 <Route exact path="/signup">
                     {user ?
-                        <Redirect to={"/"}/>:
+                        <Redirect to={"/"}/> :
                         <SignupPage/>
                     }
+                </Route>
+                <Route exact path="/play">
+                    <GameState.Provider>
+                        <Game/>
+                    </GameState.Provider>
                 </Route>
             </Switch>
         </BrowserRouter>
