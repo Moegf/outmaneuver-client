@@ -3,8 +3,7 @@ import {Websocket} from "../providers/websocket";
 import {GameState, GameStates} from "../providers/gamestate";
 
 export const RoomBrowser = () => {
-    const {send, receive} = Websocket.useContainer()
-    let {gameState, setGameState} = GameState.useContainer()
+    let {setGameState} = GameState.useContainer()
 
     return (
         <div>
