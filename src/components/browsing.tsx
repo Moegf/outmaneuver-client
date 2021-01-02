@@ -1,5 +1,4 @@
 import React from 'react'
-import {Websocket} from "../providers/websocket";
 import {GameState, GameStates} from "../providers/gamestate";
 
 export const RoomBrowser = () => {
